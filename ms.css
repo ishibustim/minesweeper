@@ -1,0 +1,229 @@
+div#game {
+    height: 650px;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    cursor: default;
+    box-shadow: 0px 0px 20px 2px #333333 inset;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+}
+
+div#popup {
+    height: 300px;
+    width: 300px;
+    font-size: 200%;
+    font-weight: bold;
+    background-color: #99CCFF;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #444444;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    text-align: center;
+    visibility: visible;
+    z-index: 2;
+}
+
+div#popup.loading {
+    line-height: 300px;
+    background-color: black;
+}
+
+div#popup.win {
+    background-color: green;
+    line-height: 300px;
+    transition: opacity 0.25s;
+}
+
+div#popup.win:hover {
+    opacity: 0.5;
+}
+
+div#popup.lose {
+    background-color: red;
+    line-height: 300px;
+    transition: opacity 0.25s;
+}
+
+div#popup.lose:hover {
+    opacity: 0.5;
+}
+
+div#popup.newgame {
+    line-height: 100px;
+}
+
+div#popup.newgame div {
+    cursor: pointer;
+}
+
+div#popup.newgame div.easy {
+    background-color: #008800;
+    border-radius: 20px 20px 0px 0px;
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+    z-index: 2;
+    position: relative;
+}
+
+div#popup.newgame div.easy:hover {
+    background-color: #44FF44;
+    box-shadow: 0px 0px 20px 2px #00CC00;
+    color: #003300;
+    z-index: 5;
+}
+
+div#popup.newgame div.normal {
+    background-color: #AAAA00;
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+    z-index: 2;
+    position: relative;
+}
+
+div#popup.newgame div.normal:hover {
+    background-color: yellow;
+    box-shadow: 0px 0px 20px 2px #CCCC00;
+    color: #333300;
+    z-index: 5;
+}
+
+div#popup.newgame div.hard {
+    background-color: #880000;
+    border-radius: 0px 0px 20px 20px;
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+    z-index: 2;
+    position: relative;
+}
+
+div#popup.newgame div.hard:hover {
+    background-color: #FF4444;
+    box-shadow: 0px 0px 20px 2px #CC0000;
+    color: #330000;
+    z-index: 5;
+}
+
+div#title {
+    height: 50px;
+    width: 600px;
+    background-color: #AAAAAA;
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    z-index: 0;
+}
+
+div#title .title {
+    height:37px;
+    width: 200px;
+    background-color: #444444;
+    color: white;
+    text-align: center;
+    line-height: 37px;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+div#title .counter {
+    height: 25px;
+    min-width: 25px;
+    padding: 0px 5px;
+    margin-top: 12px;
+    color: red;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 545px;
+    z-index: 1;
+}
+
+div#title .counter.easy {
+    color: green;
+}
+
+div#title .counter.normal {
+    color: yellow;
+    text-shadow: 0px 0px 3px #000000;
+}
+
+div#title .counter.hard {
+    color: red;
+}
+
+div#title .moves {
+    height: 25px;
+    width: 100px;
+    margin-top: 12px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 425px;
+    z-index: 1;
+}
+
+div#title .newgame {
+    height: 25px;
+    width: 150px;
+    margin-top: 12px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    z-index: 1;
+    cursor: pointer;
+    transition: background-color 0.25s, box-shadow 0.25s;
+}
+
+div#title .newgame:hover {
+    background-color: AAFFFF;
+    box-shadow: 0px 0px 20px 2px #77CCCC;
+}
+
+div#board {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    visibility: hidden;
+    z-index: 0;
+}
+
+div.tile {
+    height: 30px;
+    width: 30px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #DDDDDD;
+    border-style: outset;
+    border-color: #EEEEEE;
+    box-sizing: border-box;
+    position: absolute;
+    visibility: inherit;
+    z-index: 1;
+}
+
+div.tile.clicked {
+    background-color: #CCCCCC;
+    border-style: solid;
+    border-color: #CCCCCC;
+}
