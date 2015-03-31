@@ -1,5 +1,5 @@
 // Initialization functions in initFunctions.js
-// Master Branch
+
 var title;
 var board;
 var popup;
