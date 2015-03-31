@@ -1,3 +1,4 @@
 # minesweeper
+Full Minesweeper game
 
-This is placeholder
+Note: Must have a div with id="game" on the page when this loads.
