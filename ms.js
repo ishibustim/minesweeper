@@ -27,10 +27,16 @@ var tilesRemaining;
 var numMoves;
 
 // Flag Unicode Character
-var flagSymbol = '\u2714';
+//var flagSymbol = '\u2714';
+var flagSymbol = '<i class="fa fa-map-marker"></i>';
 
 // Bomb Unicode Character
-var bombSymbol = '\u2734';
+//var bombSymbol = '\u2734';
+var bombSymbol = '<i class="fa fa-bomb"></i>';
+
+
+// New Game icon
+var newGameIcon = '<i class="fa fa-plus-circle"></i>';
 
 // Create game on window load
 //window.onload = function()
@@ -46,7 +52,7 @@ function windowLoad()
   title = document.getElementById('title');
   board = document.getElementById('board');
 
-  title.innerHTML += '<div class="newgame" id="newGame">New Game</div>';
+  title.innerHTML += '<div class="newgame" id="newGame">' + newGameIcon + '  New Game</div>';
   title.innerHTML += '<div class="title">Minesweeper</div>';
   title.innerHTML += '<div class="moves" id="moveCounter">Moves: 0</div>';
   title.innerHTML += '<div class="counter" id="bombCounter"></div>';

@@ -212,6 +212,7 @@ div.tile {
     height: 30px;
     width: 30px;
     line-height: 24px;
+    font-size: 20px;
     text-align: center;
     background-color: #DDDDDD;
     border-style: outset;
@@ -226,4 +227,9 @@ div.tile.clicked {
     background-color: #CCCCCC;
     border-style: solid;
     border-color: #CCCCCC;
+}
+
+div.tile i {
+    display: inline-block;
+    vertical-align: bottom;
 }
